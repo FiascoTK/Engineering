@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head style = "margin:0px 30px">
+        <title>Home Run Predictor</title>
+    </head>
+    <body style = "margin:0px 30px">
+        <h1> Predict Home Runs </h1>
+        <form action="/">
+            {% for f in feature_names %}
+            <div style = "display:flex; justify-content:space-between; width:230px; margin:0px 0px 10px">
+            {{ f }}:
+
+            <input type="int" name="{{ f }}" value="{{x_input[loop.index0]}}">
+            </div>
+                {% endfor %}
+            <div style = "text-align: center; width:230px">
+            <input type="submit" value="Submit" method="get">
+            </div>
+        </form>
+
+        <p>
+        <h2 >Home Runs Predicted : <span style = "color:#830000">{{ prediction | round(2) }}</span></h2>
+        </p>
+
+    </body>
+</html>
