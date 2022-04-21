@@ -3,7 +3,7 @@ from DataCleaning import *
 from MongoStats import*
 
 def main():
-    '''
+
     year1 = int(input("Enter first year for Batting Stat Acquisition:\n"))
     year2 = int(input("Enter last year for Batting Stat Acquisition:\n"))
     year_list = Make_Year_List(year1,year2)
@@ -18,7 +18,7 @@ def main():
 
     clean_list = Full_Clean(year_list, batting_df)
     Make_Clean_Files(year_list, clean_list,'clean_batter'+string_years)
-    '''
+
 
 
     stats = LoadMongo()
